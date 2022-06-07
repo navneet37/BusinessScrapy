@@ -4,9 +4,17 @@
 # https://docs.scrapy.org/en/latest/topics/items.html
 
 import scrapy
+from scrapy.loader import ItemLoader
+from itemloaders.processors import TakeFirst, MapCompose
+from w3lib.html import remove_tags
 
 
 class BusinessItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    biz_name = scrapy.Field(input_processors=MapCompose(remove_tags), output_processor=TakeFirst())
+    address = scrapy.Field(input_processors=MapCompose(remove_tags), output_processor=TakeFirst())
+    contact_name = scrapy.Field(input_processors=MapCompose(remove_tags), output_processor=TakeFirst())
+    contact = scrapy.Field(input_processors=MapCompose(remove_tags), output_processor=TakeFirst())
+    site = scrapy.Field(input_processors=MapCompose(remove_tags), output_processor=TakeFirst())
+    social_links = scrapy.Field()
+    description = scrapy.Field(input_processors=MapCompose(remove_tags), output_processor=TakeFirst())
