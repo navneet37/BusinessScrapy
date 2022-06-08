@@ -7,6 +7,7 @@ constantly==15.1.0
 cryptography==37.0.2
 cssselect==1.1.0
 filelock==3.7.1
+free-proxy==1.0.6
 hyperlink==21.0.0
 idna==3.3
 incremental==21.3.0
@@ -25,11 +26,16 @@ queuelib==1.6.2
 requests==2.27.1
 requests-file==1.5.1
 Scrapy==2.6.1
+scrapy-rotating-proxies==0.6.2
+scrapy-user-agents==0.1.1
 service-identity==21.1.0
 six==1.16.0
 tldextract==3.3.0
 Twisted==22.4.0
+typing==3.7.4.3
 typing_extensions==4.2.0
+ua-parser==0.10.0
 urllib3==1.26.9
+user-agents==2.2.0
 w3lib==1.22.0
 zope.interface==5.4.0
